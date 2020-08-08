@@ -1,0 +1,6 @@
+Connecticut,Hartford
+Maine,Augusta
+Massachusetts,Boston
+New Hampshire,Concord
+Rhode Island,Providence
+Vermont,Montpelier

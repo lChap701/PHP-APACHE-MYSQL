@@ -1,0 +1,46 @@
+blue
+blue
+green
+pink
+purple
+red
+yellow
+forest green
+orange
+cyan
+fuchsia
+white
+black
+violet
+pink
+aqua
+blue green
+azure
+beige
+maroon
+lime
+magenta
+black
+brown
+bisque
+violet
+teal
+silver
+gray
+gold
+baby blue
+navy
+indigo
+purple
+hot pink
+khaki
+lavender
+turquoise
+olive
+plum
+salmon
+barn red
+tan
+ivory
+rose
+chartreuse
