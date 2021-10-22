@@ -1,0 +1,11 @@
+1000;1005;Safety Net;9.99;.02
+1001;1010;Safety Net;29.99;.09
+1002;1009;Safety Net;59.99;.20
+1003;1006;Network Manager;4.99;NULL
+1004;1002;Network Manager;14.99;.01
+1005;1000;Network Manager;29.99;.07
+1006;1007;Network Generator;5.99;NULL
+1007;1008;Network Generator;17.99;.05
+1008;1004;Network Generator;35.99;.15
+1009;1003;Safety Net;59.99;.20
+1010;1001;Network Generator;35.99;.15

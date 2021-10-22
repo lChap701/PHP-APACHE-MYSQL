@@ -1,0 +1,20 @@
+// JavaScript source code
+const subnav = document.getElementsByClassName("subnav");
+
+function extraStyles() {
+    const icon = document.querySelector(".subnav i");
+    const link = document.querySelector(".subnav a") 
+
+    if (!icon.classList.contains("fa-caret-up")) {
+        icon.classList.add("fa-caret-up");
+        icon.classList.toggle("fa-caret-down");
+    } else {
+        icon.classList.toggle("fa-caret-up");
+        icon.classList.toggle("fa-caret-down");
+    }
+}
+
+for (let i = 0; i < subnav.length; i++) {
+    subnav[i].addEventListener("mouseover", extraStyles);
+    subnav[i].addEventListener("mouseout", extraStyles);
+}

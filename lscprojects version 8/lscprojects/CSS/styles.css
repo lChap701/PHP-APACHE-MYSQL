@@ -1,0 +1,573 @@
+﻿/* Created by Lucas Chapman 5/27/2020 */
+/* Updated 7/12/2020 by Lucas Chapman */
+/* Global Styles */
+/* border-box fix */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* focus fix */
+:focus {
+    outline: none;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.3;
+}
+
+/* Header, Navigation, & Footer */
+header, nav, footer {
+    color: #fff;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Consolas;
+    height: 426px;
+    background: linear-gradient(to right, rgba(46, 126, 152, .7), rgba(46, 126, 152, .9)), url(../images/web-3706562_1280.jpg) no-repeat center;
+}
+    /* Uses concepts from https://www.codesdope.com/blog/article/12-creative-css-and-javascript-text-typing-animati/ */
+    header h1 {
+        border-right: solid 3px rgba(0, 0, 0, .75);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 4em;
+        margin-bottom: 21px;
+        animation: typing-1 4s steps(29, end) 1s 1 normal both, blinking-cursor 600ms steps(29, end) 9 forwards;
+    }
+    header i {
+        border-right: solid 3px rgba(0, 0, 0, 0);   /* Hides cursor until animation starts */
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 2em;
+        animation: typing-2 5s steps(29, end) 6s 1 normal both, blinking-cursor 600ms steps(29, end) 5s infinite;
+    }
+
+/* Animations that write text in the header */
+@keyframes typing-1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 8.1em;
+    }
+}
+@keyframes typing-2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16.9em;
+    }
+}
+
+/* The blinking cursor animation */
+@keyframes blinking-cursor {
+    from {
+        border-right-color: rgba(0, 0, 0, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Navigation, Footer, Sections */
+nav, footer, section {
+    padding: 15px;
+}
+
+/* Navigation */
+nav {
+    background-color: #225e71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    nav a {
+        margin-right: 20px;
+        font-size: 1.1em;
+        padding: 3px;
+    }
+        nav a:link {
+            color: #fff;
+        }
+        nav a:hover, nav a:focus, nav a:active, nav a:focus-within {
+            border-radius: 25%;
+            background-color: #1c4e5d;
+        }
+        nav a:visited, nav a:hover, nav a:focus, nav a:active, nav a:focus-within {
+            color: #f5f5f5;
+        }
+
+a {
+    text-decoration: none;
+}
+
+/* Main */
+#container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow: hidden;
+}
+
+.sect-1 {
+    color: #fff;
+    background-color: #286e85;
+}
+    .sect-1 hr {
+        border: #1c4e5d solid 1px;
+    }
+    .sect-1 i, .sect-3 i {
+        font-size: .9em;
+    }
+    .sect-1 a:link, .sect-1 a:visited {
+        color: #fff;
+    }
+    .sect-1 a:hover, .sect-1 a:focus, .sect-1 a:active, .sect-1 a:focus-within {
+        color: #f5f5f5;
+        background-color: #1c4e5d;
+    }
+.sect-2 {
+    background-color: #d3ebf2;
+}
+.sect-3 {
+    background-color: #e7f4f8;
+}
+    .sect-3 ul {
+        list-style: none;
+    }
+    .sect-3 a:link {
+        color: #32ae4f;
+    }
+    .sect-3 a:visited, .sect-3 a:hover, .sect-3 a:focus, .sect-3 a:focus-within {
+        color: #2c9a46;
+    }
+    .sect-3 a:hover, .sect-3 a:focus, .sect-3 a:focus-within {
+        background: #d3ebf2;
+    }
+    .sect-3 hr {
+        border: #d3ebf2 solid 1px;
+    }
+
+.img-med, .img-lar {
+    display: block;
+    margin: auto;
+}
+.img-med {
+    width: 25em;
+    height: 15em;
+}
+.img-lar {
+    width: 25em;
+    height: 23em;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+li {
+    line-height: 150%;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7e98;
+}
+
+
+/* products.php styles */
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+ul.deals {
+    list-style-type: disc;
+}
+
+/* Table */
+table {
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+}
+caption {
+   font-weight: bold;
+   font-size: 1.1em;
+}
+table, th,  td {
+    border: 2px solid #2e7e98;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+    td a, td a:visited {
+        color: #278633;
+    }
+        td a:hover, td a:focus, td a:focus-within, td a:active {
+            color: #21732b;
+        }
+            td a:hover {
+                background-color: #bfe2ec;
+            }
+
+
+/* inc_welcome.php styles */
+/* Uses concepts from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal */
+#special-tag {
+    position: absolute;
+    left: .5em;
+    width: auto;
+    cursor: pointer;
+}
+
+/* Login Form */
+#login {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: .5em;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form[name=login] {
+    background-color: #286e85;
+    border: 3px #2e7e98 solid;
+    padding: 20px;
+    text-align: left;
+}
+    form[name=login] label {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        display: inline-block;
+        text-align: right
+    }
+        form[name=login] label.special {
+            text-align: center;
+            font-size: 2em;
+            display: block;
+        }
+
+    form[name=login] input[type=text], input[type=password] {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 1.1em;
+        border: 1px solid #f5f5f5;
+        display: inline-block;
+    }
+        form[name=login] input[type=text]:hover, form[name=login] input[type=password]:hover, form[name=login] input[type=text]:focus, form[name=login] input[type=password]:focus {
+            border-color: #0080ff;
+        }
+
+    form[name=login] input[type=checkbox] {
+        cursor: pointer;
+    }
+
+input[name=uname] {
+    margin-bottom: 15px;
+}
+input[type=password] {
+    margin-bottom: 20px;
+}
+
+button, input[name=button] {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+}
+    input[name=button] {
+        width: 100%;
+        background-color: #32ae4f;
+        border: 2px solid #2c9a46;
+    }
+        button:hover, input[name=button]:hover, button:focus, input[name=button]:focus, button:focus-within, input[name=button]:focus-within {
+            opacity: .8;
+        }
+
+.separate {
+    padding: 16px;
+}
+
+.cancel {
+    background-color: #0080ff;
+    border: 1px solid #0073e5;
+    float: left;
+    padding: 10px 14px;
+    width: auto;
+}
+
+span.psw, .acnt {
+    padding-top: 16px;
+    float: right;
+    font-size: 1.2em;
+}
+    span.psw:hover, span.psw:focus, .acnt:hover, .acnt:focus {
+        font-weight: bold;
+    }
+
+
+/* itemform.php styles */
+form[name=order] {
+    color: #000;
+    background-color: #acd9e6;
+    border: 3px #bfe2ec solid;
+    padding: 20px;
+    text-align: left;
+}
+    form[name=order] label {
+        font-size: 1.15em;
+    }
+        form[name=order] label.special {
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+            font-size: 2em;
+        }
+
+    form[name=order] input[type=text], select {
+        margin: 20px 0;
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #f5f5f5;
+        display: inline-block;
+        font-size: 1em;
+    }
+        select {
+            cursor: pointer;
+        }
+        
+        select[disabled] {
+            cursor: default;
+        }
+            select[disabled]:hover, select[focus] {
+                border-color: #f5f5f5;
+            }
+
+        form[name=order] input[type=text]:hover, select:hover, form[name=order] input[type=text]:focus, select:focus, form[name=order] input[type=text]:focus-within, select:focus-within {
+            border-color: #1a8dff;
+        }
+
+        form[name=order] input[type=checkbox] {
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+input[type=radio] {
+    margin: 20px 10px;
+    cursor: pointer;
+}
+    input[type=radio]:hover, input[type=radio]:focus, input[type=checkbox]:hover, input[type=checkbox]:focus {
+        opacity: .9;
+    }
+
+input[name=purchase] {
+    width: 100%;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 12px;
+    background-color: #32ae4f;
+    border: 2px solid #2c9a46;
+    cursor: pointer;
+}
+    input[name=purchase]:hover, input[name=purchase]:focus, input[name=purchase]:focus-within {
+        opacity: .9;
+    }
+
+.wrap {
+    display: inline;
+}
+
+/* Uses concepts from https://www.w3schools.com/howto/howto_css_checkout_form.asp */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.col-25, .col-50, .col-75 {
+    padding: 0 16px;
+}
+    .col-25 {
+        flex: 25%;
+    }
+    .col-50 {
+        flex: 50%;
+    }
+    .col-75 {
+        flex: 75%;
+    }
+
+.hidden {
+    display: none;
+}
+
+
+/* updates.php styles */
+/* Uses concepts from https://www.w3schools.com/howto/howto_css_two_columns.asp */
+.columns {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 996px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sect-1 {
+        order: 3;
+    }
+    .sect-2 {
+        order: 1;
+    }
+    .sect-3 {
+        order: 2;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        font-size: .8em;
+    }
+
+    header {
+        background: linear-gradient(to right, rgba(46, 126, 152, .7), rgba(46, 126, 152, .9)), url(../images/web-3706562_640.jpg) no-repeat center;
+        height: 213px;
+    }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 11px;
+        }
+        header i {
+            font-size: 1.4em;
+        }
+}
+
+@media only screen and (max-width: 667px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Uses concepts from https://www.w3schools.com/howto/howto_css_two_columns.asp */
+@media screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    #special-tag {
+        right: .5em;
+        left:initial;
+        top: .5em;
+        background-color: #2e7e98;
+        padding: 10px;
+        border: 3px solid #1c4e5d;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 5px;
+    }
+
+    header i {
+        font-size: 1.3em;
+    }
+
+    nav, footer, section {
+        padding: 8px;
+    }
+
+        nav a {
+            margin-right: 10px;
+            font-size: 1.05em;
+        }
+
+    table {
+        font-size: .9em;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    caption {
+        font-size: 1.05em;
+    }
+
+    #login {
+        font-size: .9em;
+    }
+
+    form {
+        padding: 10px;
+    }
+        form[name=login] input[type=text], input[type=password] {
+            padding: 5px, 6px;
+        }
+
+        form[name=order] input[type=text], select {
+            padding: 4px 5px;
+        }
+
+    button, input[name=button] {
+        padding: 8px;
+    }
+
+    .cancel {
+        padding: 5px 7px;
+        width: 100%;
+    }
+
+    .separate {
+        padding: 8px;
+        clear: both;
+    }
+
+    input[name=purchase] {
+        padding: 5px 6px;
+    }
+
+    input[type=radio]:first-child {
+        margin-left: 0;
+    }
+
+    .wrap {
+        display: block;
+    }
+        .wrap label {
+            margin-right: 30px;
+        }
+}

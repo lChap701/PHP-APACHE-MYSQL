@@ -1,0 +1,11 @@
+1000;1010;Networking Dev Kit;9010;19.99;.03
+1001;1003;Networking Dev Kit Pro;520;29.99;.10
+1002;1004;Network Creation Center;5210;39.99;.15
+1003;1008;Net Developer Tools;250;49.99;.20
+1004;1002;Net Developer Tools Pro;3100;59.99;.35
+1005;1001;Netware;50600;69.99;.45
+1006;1009;Netsoft;100999;67.99;.45
+1007;1005;Net;10300;99.99;.55
+1008;1007;Social Network;200999;199.99;.65
+1009;1006;Net Developer Tools;205;49.99;.20
+1010;1000;Networking Dev Kit Pro;502;29.99;.10

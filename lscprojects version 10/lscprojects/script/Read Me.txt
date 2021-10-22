@@ -1,0 +1,7 @@
+The screenshots folder contains all of the screenshots for LU8.
+
+The php folder contains all of the php files I used to get encrypted values and 
+check encrypted values for matches.
+
+The datafiles folder contains all of the text files that were used to insert data 
+into tables.
